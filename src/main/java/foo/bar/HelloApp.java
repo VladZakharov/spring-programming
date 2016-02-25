@@ -28,10 +28,8 @@ public class HelloApp {
         Compere compere = (Compere) context.getBean("oleg");
 
         Performer juggler = (Performer) context.getBean("vasya");
-        compere.callPerformer(juggler);
-
         Performer dancer = (Performer) context.getBean("super_dancer");
-        compere.callPerformer(dancer);
+        compere.call(new Performer[]{juggler, dancer});
 
     }
 }
